@@ -1,0 +1,45 @@
+startproject is the command used in cmd to initiate the project
+ http://127.0.0.1:8000/ //localhost
+ below i am disucssing the structure of django project:
+ 
+ asgi ans wsgi are used for deployment
+ manage.py is not supoose to be handled by us (ex: as it used to run our server)
+ temper it only at high level
+ python3 manage.py runserver/help etc
+__init__.py used when django makes some new changes not usable at beginner level 
+seeting.py is important
+url.py is startinh point of the project and everything goes through here
+
+django apps:
+
+these apps can be called as part/components of our website
+just like microservice
+to create project:django-admin startproject projectname
+to create app : python manage.py startapp appname
+now we have to let our setting now about this new app
+go to setting.py find installed apps and add new app there 
+
+
+{ % url 'password' %} means url website pr kuch aur ho sakta hai but uska varibale name password hai (use % in case of logic for loop etc)
+
+{{ variable name }} ( use {{ basically for puling out values) 
+
+
+Suppose i am creating different apps for the same project then i have to add them under installed apps in setting.py under project  
+
+# various fields for models can be refrenced from django documentation
+
+# anyttime we make changes in models.py those changes need to be migrated to the databse(called migration)
+comand:  python manage.py migrate
+	python manage.py makemigrations (will let us know the models changes)	
+
+#pillow is the pythin images lib .. which needs to be installed to enable images usage.
+
+# 001_intial.py is created under migrations and see the changes under operations there
+# another migration will create 002 etc etc
+
+#python manage.py createsuperuser   (now enter user name and password) we can create multiple users
+# python manage.py changepassword
+
+inside admin.py we need to show what models we need to be in admin.py
+
